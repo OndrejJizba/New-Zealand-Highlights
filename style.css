@@ -1,0 +1,107 @@
+body {
+    max-width: max-content;
+    margin: auto;
+    margin-top: 50px;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.photoviewer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#photo {
+    width: 800px;
+    height: 1000px;
+}
+
+.arrow1 {
+    margin-right: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.arrow2 {
+    transform: rotate(0.5turn);
+    margin-left: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.arrow1:hover {
+    transform: scale(1.5);
+}
+
+.arrow2:hover {
+    transform: rotate(0.5turn) scale(1.5);
+}
+
+.descriptionBox {
+    position: absolute;
+    background-color: black;
+    color: white;
+    width: 800px;
+    height: 200px;
+    align-self: flex-end;
+    opacity: 0.7
+}
+
+#descriptionName {
+    margin-left: 30px;
+    margin-top: 20px;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+#descriptionText {
+    margin-left: 30px;
+    margin-top: 15px;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+#thumbnailscontainer {
+    margin-left: 35px;
+    width: 800px;
+    height: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.thumbnail {
+    width: 110px;
+    height: 140px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.thumbnail.highlight {
+    box-shadow: 0 0 10px 5px #151313;
+    transition: all 0.3s ease;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+}
+
+.thumbnail-container {
+    position: relative;
+}
+
+.thumbnail-title {
+    position: absolute;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 6px;
+    display: none;
+    top: 5px;
+    left: 5px;
+}
+
+.thumbnail-container:hover .thumbnail-title {
+    display: block;
+}
